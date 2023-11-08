@@ -730,6 +730,20 @@ config BARCO_P50_GPIO
 	  To compile this driver as a module, choose M here: the module
 	  will be called barco-p50-gpio.
 
+config SAMSUNG_GALAXYBOOK
+	tristate "Samsung Galaxybook Extras"
+	depends on ACPI
+	depends on INPUT
+	select INPUT_SPARSEKMAP
+	select LEDS_CLASS
+	select NEW_LEDS
+	help
+	  This driver adds support for hotkeys and extra features found
+	  on Samsung Galaxybook series notebooks.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called samsung-galaxybook.
+
 config SAMSUNG_LAPTOP
 	tristate "Samsung Laptop driver"
 	depends on RFKILL || RFKILL = n
